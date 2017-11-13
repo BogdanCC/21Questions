@@ -1,0 +1,67 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Spacey Quiz</string>
+    <!-- The questions -->
+    <string name="question_one">What is the most common\nelement in the universe</string>
+    <string name="question_two">Which of these moons\npossibly hides an ocean\nbeneath its surface</string>
+    <string name="question_three">What is the lowest\nenergy of light?</string>
+    <string name="question_four">If a car is stationary with its flashlights on\nand a car is moving with its flashlights on\nwhich light from the cars is faster?</string>
+    <string name="question_five">Where are stars born?</string>
+    <string name="question_six">Is our universe expanding,\ncontracting, staying still or\nall at the same time (dancing)</string>
+    <string name="question_seven">Lastly&#8230;\nWhat is life?</string>
+    <!-- The hints -->
+    <string name="question_one_hint">The most abundant element in water as well!</string>
+    <string name="question_two_hint">Its name is also an Earth continent name</string>
+    <string name="question_three_hint">Rock FM Tananananana (and I\'m not messing around!)</string>
+    <string name="question_four_hint">If we were to declare a variable for the light speed in java we would name it like this : LIGHT_SPEED</string>
+    <string name="question_five_hint">The word is of latin origin(and it sounds cool)</string>
+    <string name="question_six_hint">It\'s going faster and faster! (Yikes!)</string>
+    <string name="question_seven_hint">Freedom</string>
+    <!-- Answer set for question one -->
+    <string name="trick_answer1_1">Carbon</string>
+    <string name="trick_answer2_1">Oxygen</string>
+    <string name="correct_answer3_1">Hydrogen</string>
+    <string name="trick_answer4_1">Neon</string>
+    <!-- Answer set for question two -->
+    <string name="correct_answer1_2">Europa</string>
+    <string name="trick_answer2_2">Titan</string>
+    <string name="trick_answer3_2">Our moon</string>
+    <string name="trick_answer4_2">Triton</string>
+    <!-- Answer set for question three -->
+    <string name="trick_answer1_3">Gamma rays</string>
+    <string name="trick_answer2_3">Micro-waves</string>
+    <string name="trick_answer3_3">^ You\'re messing with me</string>
+    <string name="correct_answer4_3">Radio waves</string>
+    <!-- Answer set for question four -->
+    <string name="trick_answer1_4">The stationary car light</string>
+    <string name="trick_answer2_4">The moving car light</string>
+    <string name="correct_answer3_4">Same speed, light is CONSTANT</string>
+    <string name="trick_answer4_4">Stahp this</string>
+    <!-- Answer set for question five -->
+    <string name="trick_answer1_5">In Hollywood</string>
+    <string name="trick_answer2_5">In the center of galaxies</string>
+    <string name="correct_answer3_5">In nebulae</string>
+    <string name="trick_answer4_5">Inside black holes</string>
+    <!-- Answer set for question six -->
+    <string name="correct_answer1_6">Expanding</string>
+    <string name="trick_answer2_6">Dancing</string>
+    <string name="trick_answer3_6">Staying still</string>
+    <string name="trick_answer4_6">Contracting</string>
+    <!-- Answer set for question seven -->
+    <string name="trick_answer1_7">Baby don\'t hurt me!</string>
+    <string name="trick_answer2_7">^Oh&#8230;that was love</string>
+    <string name="trick_answer3_7">Life&#8230;the ability to die!</string>
+    <string name="correct_answer4_7">Whatever we make of it!</string>
+    <string name="all_questions_done">You\'re done!\nHere are your explosive results</string>
+    <!-- Submit and Reset -->
+    <string name="submit_s">S</string>
+    <string name="reset_r">R</string>
+    <!-- Results strings-->
+    <string name="correct_answers">Correct answers</string>
+    <string name="wrong_answers">Wrong answers</string>
+    <string name="time_elapsed">Time Elapsed</string>
+    <!-- Errors strings -->
+    <string name="no_answer_checked">Please select an answer</string>
+    <string name="final_question">You\'ve reached the end, please reset</string>
+    <!-- Strings for java code -->
+    <string name="current_question"><xliff:g id="current_position" example="5">%d</xliff:g> of <xliff:g id="total_positions" example="7">%d</xliff:g></string>
+</resources>

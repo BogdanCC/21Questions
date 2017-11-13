@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00BCD4</color>
+    <color name="colorPrimaryDark">#00BCD4</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="reset_color">#f76363</color>
+    <color name="text_color">#000</color>
+    <color name="light_cyan">#80DEEA</color>
+    <color name="lighter_cyan">#B2EBF2</color>
+    <color name="text_color_white">#FFFFFF</color>
+    <color name="white_general">#FFFFFF</color>
+    <color name="red_button_pressed">#FFCDD2</color>
+</resources>
+
