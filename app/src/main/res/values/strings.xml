@@ -1,12 +1,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Spacey Quiz</string>
     <!-- The questions -->
-    <string name="question_one">What is the most common\nelement in the universe</string>
-    <string name="question_two">Which of these moons\npossibly hides an ocean\nbeneath its surface</string>
+    <string name="question_one">What is the most common\nelement in the universe?</string>
+    <string name="question_two">Which of these moons\npossibly hides an ocean\nbeneath its surface?</string>
     <string name="question_three">What is the lowest\nenergy of light?</string>
     <string name="question_four">If a car is stationary with its flashlights on\nand a car is moving with its flashlights on\nwhich light from the cars is faster?</string>
     <string name="question_five">Where are stars born?</string>
-    <string name="question_six">Is our universe expanding,\ncontracting, staying still or\nall at the same time (dancing)</string>
+    <string name="question_six">Is our universe expanding,\ncontracting, staying still or\nall at the same time (dancing)?</string>
     <string name="question_seven">Lastly&#8230;\nWhat is life?</string>
     <!-- The hints -->
     <string name="question_one_hint">The most abundant element in water as well!</string>

@@ -2,11 +2,11 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="false">
         <shape android:shape="rectangle">
-            <corners android:radius="1000dp" />
+            <corners android:radius="@dimen/circle_radius" />
             <solid android:color="@color/reset_color" />
             <stroke
-                android:width="2dip"
-                android:color="#FFFFFF" />
+                android:width="@dimen/circle_stroke"
+                android:color="@color/white_general" />
             <padding
                 android:bottom="@dimen/circle_padding"
                 android:left="@dimen/circle_padding"
@@ -16,10 +16,10 @@
     </item>
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
-            <corners android:radius="1000dp" />
+            <corners android:radius="@dimen/circle_radius" />
             <solid android:color="@color/red_button_pressed" />
             <stroke
-                android:width="2dip"
+                android:width="@dimen/circle_stroke"
                 android:color="@color/white_general" />
             <padding
                 android:bottom="@dimen/circle_padding"

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,6 +31,21 @@ public class MainActivity extends AppCompatActivity {
     public int wrongAnswers; // wrong answers will be total answers - right answers
     public long timeStart;
     public long timeEnd;
+    public int imageCount = 0;
+    /** Fun little method to change between 3 backgrounds */
+    public void changeImage(View view){
+        ImageView image = findViewById(R.id.changeable_image);
+        if(imageCount == 0) {
+            image.setImageResource(R.drawable.background22);
+            imageCount++;
+        } else if(imageCount == 1) {
+            image.setImageResource(R.drawable.background3);
+            imageCount++;
+        } else if(imageCount == 2) {
+            image.setImageResource(R.drawable.descarcare);
+            imageCount = 0; // if this is the 3rd image, make imageCount 0 to start over frm the first
+        }
+    }
     /** Our huge submit answer method */
     public void submitAnswer(View view) {
         /** Getting radio buttons, text views and other views to manipulate them */

@@ -13,8 +13,9 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/background2"
+            android:src="@drawable/descarcare"
             android:scaleType="centerCrop"
+            android:id="@+id/changeable_image"
             />
     </FrameLayout>
     <ScrollView
@@ -29,14 +30,26 @@
             android:paddingRight="@dimen/medium_spacing"
             android:paddingTop="@dimen/small_spacing"
             >
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/idea"
-                android:layout_gravity="center"
-                android:clickable="true"
-                android:onClick="showHint"
-                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/layers"
+                    android:clickable="true"
+                    android:onClick="changeImage"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/idea"
+                    android:clickable="true"
+                    android:onClick="showHint"
+                    android:layout_centerHorizontal="true"
+                    />
+            </RelativeLayout>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/question_textbox_size"
@@ -48,6 +61,7 @@
                 android:textSize="@dimen/question_text_size"
                 android:textColor="@color/text_color_white"
                 android:layout_marginBottom="@dimen/small_spacing"
+                android:fontFamily="@font/roboto_black_italic"
                 />
             <LinearLayout
                 android:layout_width="match_parent"
@@ -67,6 +81,8 @@
                         android:text="@string/correct_answers"
                         android:layout_weight="2"
                         android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/roboto_thin"
+                        android:textColor="@color/text_color"
                         />
                     <TextView
                         android:layout_width="@dimen/null_size"
@@ -76,6 +92,8 @@
                         android:text=""
                         android:textAlignment="center"
                         android:id="@+id/final_correct_answers"
+                        android:fontFamily="@font/roboto_thin"
+                        android:textColor="@color/text_color"
                         />
                     <ImageView
                         android:layout_width="@dimen/null_size"
@@ -95,7 +113,8 @@
                         android:text="@string/wrong_answers"
                         android:layout_weight="2"
                         android:layout_gravity="center_vertical"
-                        />
+                        android:fontFamily="@font/roboto_thin"
+                        android:textColor="@color/text_color" />
                     <TextView
                         android:layout_width="@dimen/null_size"
                         android:layout_height="wrap_content"
@@ -104,6 +123,8 @@
                         android:text=""
                         android:textAlignment="center"
                         android:id="@+id/final_wrong_answers"
+                        android:fontFamily="@font/roboto_thin"
+                        android:textColor="@color/text_color"
                         />
                     <ImageView
                         android:layout_width="@dimen/null_size"
@@ -123,6 +144,8 @@
                         android:text="@string/time_elapsed"
                         android:layout_weight="2"
                         android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/roboto_thin"
+                        android:textColor="@color/text_color"
                         />
                     <TextView
                         android:layout_width="@dimen/null_size"
@@ -132,6 +155,8 @@
                         android:text=""
                         android:textAlignment="center"
                         android:id="@+id/final_time_elapsed"
+                        android:fontFamily="@font/roboto_thin"
+                        android:textColor="@color/text_color"
                         />
                     <ImageView
                         android:layout_width="@dimen/null_size"
@@ -157,6 +182,7 @@
                     android:button="@android:color/transparent"
                     android:drawableLeft="@drawable/navigation"
                     android:drawablePadding="@dimen/small_spacing"
+                    android:fontFamily="@font/roboto_light"
                     />
                 <android.support.v7.widget.AppCompatRadioButton
                     android:layout_width="match_parent"
@@ -170,6 +196,7 @@
                     android:button="@android:color/transparent"
                     android:drawableLeft="@drawable/navigation"
                     android:drawablePadding="@dimen/small_spacing"
+                    android:fontFamily="@font/roboto_light"
                     />
                 <android.support.v7.widget.AppCompatRadioButton
                     android:layout_width="match_parent"
@@ -183,6 +210,7 @@
                     android:button="@android:color/transparent"
                     android:drawableLeft="@drawable/navigation"
                     android:drawablePadding="@dimen/small_spacing"
+                    android:fontFamily="@font/roboto_light"
                     />
                 <android.support.v7.widget.AppCompatRadioButton
                     android:layout_width="match_parent"
@@ -196,6 +224,7 @@
                     android:button="@android:color/transparent"
                     android:drawableLeft="@drawable/navigation"
                     android:drawablePadding="@dimen/small_spacing"
+                    android:fontFamily="@font/roboto_light"
                     />
             </RadioGroup>
             <LinearLayout
@@ -212,6 +241,8 @@
                     android:text=""
                     android:textAlignment="center"
                     android:id="@+id/current_question"
+                    android:fontFamily="@font/roboto_thin"
+                    android:textColor="@color/text_color"
                     />
             </LinearLayout>
             <LinearLayout
@@ -232,6 +263,7 @@
                 android:background="@drawable/circle"
                 android:textSize="@dimen/submit_text_size"
                 android:textColor="@color/text_color_white"
+                android:fontFamily="@font/roboto_thin"
                 />
             <LinearLayout
                 android:layout_width="@dimen/divider_width"
@@ -251,6 +283,7 @@
                 android:onClick="resetQuiz"
                 android:layout_gravity="center"
                 android:background="@drawable/circle_reset"
+                android:fontFamily="@font/roboto_thin"
                 />
         </LinearLayout>
     </ScrollView>

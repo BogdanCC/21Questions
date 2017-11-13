@@ -2,11 +2,13 @@
 <resources>
     <!-- Element sizes -->
     <dimen name="null_size">0dp</dimen>
+    <dimen name="circle_stroke">1dip</dimen>
     <dimen name="divider_width">2dp</dimen>
     <dimen name="divider_height">24dp</dimen>
     <dimen name="radio_button_height">64dp</dimen>
     <dimen name="circle_button_size">75dp</dimen>
     <dimen name="question_textbox_size">120dp</dimen>
+    <dimen name="circle_radius">1000dp</dimen>
     <!-- Spacing -->
     <dimen name="circle_padding">4dp</dimen>
     <dimen name="small_spacing">16dp</dimen>
