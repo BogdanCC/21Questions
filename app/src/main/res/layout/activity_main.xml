@@ -43,7 +43,7 @@
                 android:text="@string/question_one"
                 android:textAlignment="center"
                 android:gravity="center_vertical"
-                android:layout_marginTop="@dimen/medium_spacing"
+                android:layout_marginTop="@dimen/small_spacing"
                 android:id="@+id/question_text_view"
                 android:textSize="@dimen/question_text_size"
                 android:textColor="@color/text_color_white"
