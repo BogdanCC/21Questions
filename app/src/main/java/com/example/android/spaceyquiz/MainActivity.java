@@ -32,18 +32,28 @@ public class MainActivity extends AppCompatActivity {
     public long timeStart;
     public long timeEnd;
     public int imageCount = 0;
-    /** Fun little method to change between 3 backgrounds */
+    /** Fun little method to change between 3 backgrounds 
+    * Whenever we press the little icon it will call this method
+    */
     public void changeImage(View view){
-        ImageView image = findViewById(R.id.changeable_image);
+        ImageView image = findViewById(R.id.changeable_image); // get the ImageView by its id to manipulate the android:src attribute
+        // first time we press the icon, iamgeCount is 0
         if(imageCount == 0) {
-            image.setImageResource(R.drawable.background22);
-            imageCount++;
-        } else if(imageCount == 1) {
-            image.setImageResource(R.drawable.background3);
-            imageCount++;
-        } else if(imageCount == 2) {
-            image.setImageResource(R.drawable.descarcare);
-            imageCount = 0; // if this is the 3rd image, make imageCount 0 to start over frm the first
+            image.setImageResource(R.drawable.background22); // sets this image as src to the ImageView
+            imageCount++; // add 1 to imageCount, so next time we press it will run the below else if statement
+        } 
+        // Now, if we pressed once, imageCount became 1 and we run this code
+        // the else if statement runs only when the if statement doesn't
+        // since we added 1, and imageCount is now not 0, the if statement is false and else if will run
+        else if(imageCount == 1) {
+            image.setImageResource(R.drawable.background3); // we set this image this time
+            imageCount++; // add 1 again so we run the else if below
+        } 
+        // Now imageCount became 2 so both the first if and else if statement are false, and this else if statement is true now
+        // imageCount is now 2, this will run
+        else if(imageCount == 2) {
+            image.setImageResource(R.drawable.descarcare); // set the image to the initial one and set imageCount back to 0
+            imageCount = 0; // set the imageCount back to 0, this means the 4th time we press the button it will run all over again and so on
         }
     }
     /** Our huge submit answer method */
