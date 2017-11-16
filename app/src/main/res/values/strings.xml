@@ -1,6 +1,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Spacey Quiz</string>
-    <!-- The questions -->
+    <!-- Categories -->
+    <string name="space_quiz">Space Quiz</string>
+    <string name="got_quiz">Game of Thrones</string>
+    <string name="quantum_quiz">Quantum Mechanics</string>
+    <!-- The space questions -->
     <string name="question_one">What is the most common\nelement in the universe?</string>
     <string name="question_two">Which of these moons\npossibly hides an ocean\nbeneath its surface?</string>
     <string name="question_three">What is the lowest\nenergy of light?</string>
@@ -8,7 +12,7 @@
     <string name="question_five">Where are stars born?</string>
     <string name="question_six">Is our universe expanding,\ncontracting, staying still or\nall at the same time (dancing)?</string>
     <string name="question_seven">Lastly&#8230;\nWhat is life?</string>
-    <!-- The hints -->
+    <!-- The space hints -->
     <string name="question_one_hint">The most abundant element in water as well!</string>
     <string name="question_two_hint">Its name is also an Earth continent name</string>
     <string name="question_three_hint">Rock FM Tananananana (and I\'m not messing around!)</string>
@@ -16,42 +20,144 @@
     <string name="question_five_hint">The word is of latin origin(and it sounds cool)</string>
     <string name="question_six_hint">It\'s going faster and faster! (Yikes!)</string>
     <string name="question_seven_hint">Freedom</string>
-    <!-- Answer set for question one -->
+    <!-- Answer set for question one (space) -->
     <string name="trick_answer1_1">Carbon</string>
     <string name="trick_answer2_1">Oxygen</string>
     <string name="correct_answer3_1">Hydrogen</string>
     <string name="trick_answer4_1">Neon</string>
-    <!-- Answer set for question two -->
+    <!-- Answer set for question two (space) -->
     <string name="correct_answer1_2">Europa</string>
     <string name="trick_answer2_2">Titan</string>
     <string name="trick_answer3_2">Our moon</string>
     <string name="trick_answer4_2">Triton</string>
-    <!-- Answer set for question three -->
+    <!-- Answer set for question three (space) -->
     <string name="trick_answer1_3">Gamma rays</string>
     <string name="trick_answer2_3">Micro-waves</string>
     <string name="trick_answer3_3">^ You\'re messing with me</string>
     <string name="correct_answer4_3">Radio waves</string>
-    <!-- Answer set for question four -->
+    <!-- Answer set for question four (space) -->
     <string name="trick_answer1_4">The stationary car light</string>
     <string name="trick_answer2_4">The moving car light</string>
     <string name="correct_answer3_4">Same speed, light is CONSTANT</string>
     <string name="trick_answer4_4">Stahp this</string>
-    <!-- Answer set for question five -->
+    <!-- Answer set for question five (space) -->
     <string name="trick_answer1_5">In Hollywood</string>
     <string name="trick_answer2_5">In the center of galaxies</string>
     <string name="correct_answer3_5">In nebulae</string>
     <string name="trick_answer4_5">Inside black holes</string>
-    <!-- Answer set for question six -->
+    <!-- Answer set for question six (space) -->
     <string name="correct_answer1_6">Expanding</string>
     <string name="trick_answer2_6">Dancing</string>
     <string name="trick_answer3_6">Staying still</string>
     <string name="trick_answer4_6">Contracting</string>
-    <!-- Answer set for question seven -->
+    <!-- Answer set for question seven (space) -->
     <string name="trick_answer1_7">Baby don\'t hurt me!</string>
     <string name="trick_answer2_7">^Oh&#8230;that was love</string>
     <string name="trick_answer3_7">Life&#8230;the ability to die!</string>
     <string name="correct_answer4_7">Whatever we make of it!</string>
     <string name="all_questions_done">You\'re done!\nHere are your explosive results</string>
+    <!-- The GoT questions -->
+    <string name="question_one_got">What\'s the name of\nThe Mad King?</string>
+    <string name="question_two_got">What are the words\nof House Targaryen?</string>
+    <string name="question_three_got">What does Jon Snow\nknow?</string>
+    <string name="question_four_got">And who is Arya?</string>
+    <string name="question_five_got">Who goes\nby the name of\nMaster of Whisperers?</string>
+    <string name="question_six_got">Who created the\nWhite Walkers?</string>
+    <string name="question_seven_got">Hodor&#8230;</string>
+    <!-- The GoT hints -->
+    <string name="question_one_hint_got">It\'s not Aerys I Targaryen&#8230;</string>
+    <string name="question_two_hint_got">BURN THEM ALL!</string>
+    <string name="question_three_hint_got"></string>
+    <string name="question_four_hint_got"></string>
+    <string name="question_five_hint_got">Power resides where men believe it resides; it\'s a trick, a shadow on the wall, and a very small man can cast a very large shadow.</string>
+    <string name="question_six_hint_got">Little green pricks!</string>
+    <string name="question_seven_hint_got">Hodor</string>
+    <!-- Answer set for question one (GoT) -->
+    <string name="trick_answer1_1_got">Aegon The Conqueror</string>
+    <string name="correct_answer2_1_got">Aerys II Targaryen</string>
+    <string name="trick_answer3_1_got">Daemon Blackfyre</string>
+    <string name="trick_answer4_1_got">Aemon Targaryen</string>
+    <!-- Answer set for question two (GoT) -->
+    <string name="correct_answer1_2_got">Fire and Blood</string>
+    <string name="trick_answer2_2_got">Mac and Cheese</string>
+    <string name="trick_answer3_2_got">Honor and Greed</string>
+    <string name="trick_answer4_2_got">Fury and Speed</string>
+    <!-- Answer set for question three (GoT) -->
+    <string name="trick_answer1_3_got">Quantum mechanics</string>
+    <string name="trick_answer2_3_got">Dying</string>
+    <string name="correct_answer3_3_got">Nothing</string>
+    <string name="trick_answer4_3_got">How to smile</string>
+    <!-- Answer set for question four (GoT) -->
+    <string name="correct_answer1_4_got">No one</string>
+    <string name="trick_answer2_4_got">Someone</string>
+    <string name="trick_answer3_4_got">Shy one</string>
+    <string name="trick_answer4_4_got">Wun Wun one one</string>
+    <!-- Answer set for question five (GoT) -->
+    <string name="trick_answer1_5_got">Littlefinger</string>
+    <string name="correct_answer2_5_got">Varys</string>
+    <string name="trick_answer3_5_got">Tormund</string>
+    <string name="trick_answer4_5_got">Wun Wun</string>
+    <!-- Answer set for question six (GoT) -->
+    <string name="trick_answer1_6_got">Nobody knows</string>
+    <string name="trick_answer2_6_got">Snow</string>
+    <string name="trick_answer3_6_got">The God of Light</string>
+    <string name="correct_answer4_6_got">The Children of The Forest</string>
+    <!-- Answer set for question seven (GoT) -->
+    <string name="trick_answer1_7_got">Hodor</string>
+    <string name="trick_answer2_7_got">Hodor</string>
+    <string name="trick_answer3_7_got">Hodor</string>
+    <string name="correct_answer4_7_got">Hodor</string>
+    <!-- The sports questions -->
+    <string name="question_one_quantum">What\'s a photon?</string>
+    <string name="question_two_quantum">When matter is both a particle\nand a wave\nhow do we call it?</string>
+    <string name="question_three_quantum">If a particle is in Las Vegas\nAND in Dubai, at the same time\nwe call that&#8230;</string>
+    <string name="question_four_quantum">In a quantum computer\na bit can be&#8230;</string>
+    <string name="question_five_quantum">Niels Bohr once said&#8230;</string>
+    <string name="question_six_quantum">Einstein called the quantum\nentanglement phenomenon&#8230;</string>
+    <string name="question_seven_quantum">And again&#8230;\nWhat is life?</string>
+    <!-- The sports hints -->
+    <string name="question_one_hint_quantum">Indecisive</string>
+    <string name="question_two_hint_quantum">We would use a hyphenated word for that I believe</string>
+    <string name="question_three_hint_quantum">It\'s one heck of a position</string>
+    <string name="question_four_hint_quantum">An efficient dual state</string>
+    <string name="question_five_hint_quantum">That\'s amaziiing! </string>
+    <string name="question_six_hint_quantum">Action, at a spooky distance!</string>
+    <string name="question_seven_hint_quantum">I\'m tired</string>
+    <!-- Answer set for question one (sports) -->
+    <string name="trick_answer1_1_quantum">A particle</string>
+    <string name="trick_answer2_1_quantum">A wave</string>
+    <string name="trick_answer3_1_quantum">A particular wave?</string>
+    <string name="correct_answer4_1_quantum">Both a particle and a wave!</string>
+    <!-- Answer set for question two (sports) -->
+    <string name="correct_answer1_2_quantum">Wave-particle duality</string>
+    <string name="trick_answer2_2_quantum">Indecisive!</string>
+    <string name="trick_answer3_2_quantum">High!</string>
+    <string name="trick_answer4_2_quantum">Double trouble!</string>
+    <!-- Answer set for question three (sports) -->
+    <string name="trick_answer1_3_quantum">Rich AF</string>
+    <string name="trick_answer2_3_quantum">Superman position</string>
+    <string name="trick_answer3_3_quantum">Faster than light!</string>
+    <string name="correct_answer4_3_quantum">Superposition</string>
+    <!-- Answer set for question four (sports) -->
+    <string name="trick_answer1_4_quantum">1 or 0</string>
+    <string name="trick_answer2_4_quantum">1 or 1</string>
+    <string name="correct_answer3_4_quantum">1 and 0</string>
+    <string name="trick_answer4_4_quantum">1 and 1</string>
+    <!-- Answer set for question five (sports) -->
+    <string name="trick_answer1_5_quantum">I have a dream&#8230;</string>
+    <string name="trick_answer2_5_quantum">Let\'s make America Great Again!</string>
+    <string name="trick_answer3_5_quantum">How\'s the weather?</string>
+    <string name="correct_answer4_5_quantum">If you\'re not astonished by quantum mechanics, then you haven\'t understood it.</string>
+    <!-- Answer set for question six (sports) -->
+    <string name="correct_answer1_6_quantum">Spooky action at a distance</string>
+    <string name="trick_answer2_6_quantum">Action spooky at a distance</string>
+    <string name="trick_answer3_6_quantum">Distant action at a spooky</string>
+    <string name="trick_answer4_6_quantum">Spooky distance at an action</string>
+    <!-- Answer set for question seven (sports) -->
+    <string name="trick_answer1_7_quantum">Baby don\'t hurt me!</string>
+    <string name="trick_answer2_7_quantum">^Oh&#8230;that was love again</string>
+    <string name="trick_answer3_7_quantum">My head hurts</string>
+    <string name="correct_answer4_7_quantum">I can\'t think of another answer, just choose this</string>
     <!-- Submit and Reset -->
     <string name="submit_s">S</string>
     <string name="reset_r">R</string>

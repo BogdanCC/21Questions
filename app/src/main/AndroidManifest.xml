@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SpaceActivity" android:label="Spacey Quiz"></activity>
+        <activity android:name=".GotActivity"></activity>
+        <activity android:name=".QuantumActivity"></activity>
     </application>
 
 </manifest>
