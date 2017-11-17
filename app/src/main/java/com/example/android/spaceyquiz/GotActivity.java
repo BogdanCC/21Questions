@@ -23,23 +23,24 @@ public class GotActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_got);
-        // start the timer when application starts
+        // Start the timer when this activity starts
         timeStart = System.currentTimeMillis();
+        // Get current question (0)
         TextView questionNumber = findViewById(R.id.current_question);
-        // Get Questions and Answers to set the text for GOT
+        // Get GoT Questions and Answers to set the initial Q&A for GOT
         TextView questionTextView = findViewById(R.id.question_text_view);
         RadioButton checkbox1 = findViewById(R.id.answer1);
         RadioButton checkbox2 = findViewById(R.id.answer2);
         RadioButton checkbox3 = findViewById(R.id.answer3);
         RadioButton checkbox4 = findViewById(R.id.answer4);
+        // Set the initial GoT Q&A text
         questionTextView.setText(R.string.question_one_got);
         checkbox1.setText(R.string.trick_answer1_1_got);
         checkbox2.setText(R.string.correct_answer2_1_got);
         checkbox3.setText(R.string.trick_answer3_1_got);
         checkbox4.setText(R.string.trick_answer4_1_got);
+        // Set the text for current question text, below the answer options (1 of 7)
         questionNumber.setText(getString(R.string.current_question, currentQuestion + 1, totalQuestions));
-        // Array list with question and answers objects
-
     }
 
 
@@ -58,16 +59,18 @@ public class GotActivity extends AppCompatActivity {
      * Fun little method to change between 3 backgrounds
      */
     public void changeImage(View view) {
+        // Find the image that we want to modify
         ImageView image = findViewById(R.id.changeable_image);
+        // imageCount is initialised to 0, so first time we click the button this will run
         if (imageCount == 0) {
-            image.setImageResource(R.drawable.got2);
-            imageCount++;
-        } else if (imageCount == 1) {
-            image.setImageResource(R.drawable.got3);
-            imageCount++;
-        } else if (imageCount == 2) {
-            image.setImageResource(R.drawable.got1);
-            imageCount = 0; // if this is the 3rd image, make imageCount 0 to start over frm the first
+            image.setImageResource(R.drawable.got2); // set a new src to the ImageView
+            imageCount++; // increase imageCount to make this loop work
+        } else if (imageCount == 1) { // imageCount is now 1, so second time we press the button this will run
+            image.setImageResource(R.drawable.got3); // set yet another src to the ImageView
+            imageCount++; // increase imageCount again
+        } else if (imageCount == 2) { // 3rd time, this will run
+            image.setImageResource(R.drawable.got1); // set the initial src for the ImageView
+            imageCount = 0; // make imageCount 0 again, so when we press the button again this thing will start all over again
         }
     }
 
