@@ -22,13 +22,13 @@ public class QuantumActivity extends AppCompatActivity {
         // remove title
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        // set activity_quantum as layout
         setContentView(R.layout.activity_quantum);
-        // start the timer when application starts
+        // start the timer when this quiz starts starts
         timeStart = System.currentTimeMillis();
         TextView questionNumber = findViewById(R.id.current_question);
         questionNumber.setText(getString(R.string.current_question, currentQuestion + 1, totalQuestions));
-        // Array list with question and answers objects
-        // Get Questions and Answers to set the text for GOT
+        // Get Questions and Answers to initialise the text for Quantum
         TextView questionTextView = findViewById(R.id.question_text_view);
         RadioButton checkbox1 = findViewById(R.id.answer1);
         RadioButton checkbox2 = findViewById(R.id.answer2);
@@ -51,22 +51,22 @@ public class QuantumActivity extends AppCompatActivity {
     public int wrongAnswers; // wrong answers will be total answers - right answers
     public long timeStart;
     public long timeEnd;
-    public int imageCount = 0;
+    public int imageCount = 0; // initialise imageCount to 0
 
     /**
      * Fun little method to change between 3 backgrounds
      */
     public void changeImage(View view) {
         ImageView image = findViewById(R.id.changeable_image);
-        if (imageCount == 0) {
+        if (imageCount == 0) { // first click
             image.setImageResource(R.drawable.quantum2);
             imageCount++;
-        } else if (imageCount == 1) {
+        } else if (imageCount == 1) { // second click
             image.setImageResource(R.drawable.quantum3);
             imageCount++;
-        } else if (imageCount == 2) {
+        } else if (imageCount == 2) { // third click
             image.setImageResource(R.drawable.quantum1);
-            imageCount = 0; // if this is the 3rd image, make imageCount 0 to start over frm the first
+            imageCount = 0; // if this is the 3rd click, make imageCount 0 to start over frm the first
         }
     }
 
