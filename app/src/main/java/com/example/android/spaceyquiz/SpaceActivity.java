@@ -22,6 +22,7 @@ public class SpaceActivity extends AppCompatActivity {
         // remove title
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        // set activity_space as the layout
         setContentView(R.layout.activity_space);
         // start the timer when application starts
         timeStart = System.currentTimeMillis();
@@ -41,22 +42,22 @@ public class SpaceActivity extends AppCompatActivity {
     public int wrongAnswers; // wrong answers will be total answers - right answers
     public long timeStart;
     public long timeEnd;
-    public int imageCount = 0;
+    public int imageCount = 0; // initialise imageCount to 0
 
     /**
      * Fun little method to change between 3 backgrounds
      */
     public void changeImage(View view) {
         ImageView image = findViewById(R.id.changeable_image);
-        if (imageCount == 0) {
+        if (imageCount == 0) { // first time clicked
             image.setImageResource(R.drawable.background22);
             imageCount++;
-        } else if (imageCount == 1) {
+        } else if (imageCount == 1) { // second time clicked
             image.setImageResource(R.drawable.background3);
             imageCount++;
-        } else if (imageCount == 2) {
+        } else if (imageCount == 2) { // thirs time clicked
             image.setImageResource(R.drawable.descarcare);
-            imageCount = 0; // if this is the 3rd image, make imageCount 0 to start over frm the first
+            imageCount = 0; // if this is the 3rd time we click, make imageCount 0 to start over frm the first
         }
     }
 
