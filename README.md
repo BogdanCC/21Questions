@@ -7,7 +7,8 @@
 
 ![Alt text](Screenshots/Screenshot_2017-11-17-02-31-02.png?raw=true "Optional Title")
 ![Alt text](Screenshots/Screenshot_2017-11-13-20-15-46.png?raw=true "Optional Title")
-![Alt text](Screenshots/Screenshot_2017-11-17-02-23-52.png?raw=true "Optional Title")
+![Alt text](Screenshots/Screenshot_2017-11-13-20-16-14.png?raw=true "Optional Title")
+![Alt text](Screenshots/Screenshot_2017-11-17-02-30-49.png?raw=true "Optional Title")
 ![Alt text](Screenshots/Screenshot_2017-11-17-02-31-44.png?raw=true "Optional Title")
 ![Alt text](Screenshots/Screenshot_2017-11-17-02-24-02.png?raw=true "Optional Title")
-![Alt text](Screenshots/Screenshot_2017-11-13-20-16-14.png?raw=true "Optional Title")
+
