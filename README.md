@@ -1,5 +1,5 @@
 # 21 Questions 
- - There are 21 questions here
+ - There are 21 questions here, 3 categories with 7 questions each
  - You can press the lightbulb for answer hints
  - You can press the upper left image to change between 3 backgrounds for each category
  - Once a quiz starts the timer will start keeping track of the time elapsed until your final submit
