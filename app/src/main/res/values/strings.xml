@@ -1,9 +1,9 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Spacey Quiz</string>
     <!-- Categories -->
-    <string name="space_quiz">Space Quiz</string>
-    <string name="got_quiz">Game of Thrones</string>
-    <string name="quantum_quiz">Quantum Mechanics</string>
+    <string name="space_quiz">Space</string>
+    <string name="got_quiz">GoT</string>
+    <string name="quantum_quiz">Quantum</string>
     <!-- The space questions -->
     <string name="question_one">What is the most common\nelement in the universe?</string>
     <string name="question_two">Which of these moons\npossibly hides an ocean\nbeneath its surface?</string>

@@ -7,5 +7,8 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="tabStyle">
+        <item name="tabIndicatorColor">@color/colorPrimary</item>
+        <item name="fontFamily">@font/roboto_thin</item>
+    </style>
 </resources>
