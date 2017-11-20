@@ -3,6 +3,7 @@ package com.example.android.spaceyquiz;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +17,8 @@ import android.widget.Toast;
  * Created by bogda on 11/19/2017.
  */
 
-public class QuantumFragment extends Fragment {
+public class QuantumFragment extends Fragment implements FragmentLifecycleInterface{
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -54,7 +56,12 @@ public class QuantumFragment extends Fragment {
         resetButton.setOnClickListener(resetQuizListener);
         return rootView;
     }
-
+    @Override
+    public void fragmentBecameVisible(){
+        Button resetButton = getActivity().findViewById(R.id.reset_button2);
+        resetButton.performClick();
+        Log.i("Quantum Fragment", "Became Visible now");
+    }
     /**
      * Creating the needed variables
      */

@@ -3,6 +3,7 @@ package com.example.android.spaceyquiz;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +13,8 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class GoTFragment extends Fragment{
+public class GoTFragment extends Fragment implements FragmentLifecycleInterface{
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -49,6 +51,12 @@ public class GoTFragment extends Fragment{
         Button resetButton = rootView.findViewById(R.id.reset_button1);
         resetButton.setOnClickListener(resetQuizListener);
         return rootView;
+    }
+    @Override
+    public void fragmentBecameVisible(){
+        Button resetButton = getActivity().findViewById(R.id.reset_button1);
+        resetButton.performClick();
+        Log.i("GoT Fragment", "Became Visible now");
     }
     /**
      * Creating the needed variables

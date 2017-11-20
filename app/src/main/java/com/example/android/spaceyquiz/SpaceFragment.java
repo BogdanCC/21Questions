@@ -3,6 +3,7 @@ package com.example.android.spaceyquiz;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +13,8 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class SpaceFragment extends Fragment {
+public class SpaceFragment extends Fragment implements FragmentLifecycleInterface{
+
     /**
      * Creating the needed variables
      */
@@ -23,7 +25,6 @@ public class SpaceFragment extends Fragment {
     public long timeStart; // variable to store the time when the quiz started
     public long timeEnd; // variable to store the time when the quiz ends (after final submit)
     public int imageCount = 0; // setting imageCount to 0, see the changeImageListener method
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -61,29 +62,11 @@ public class SpaceFragment extends Fragment {
         resetButton.setOnClickListener(resetQuiz);
         return rootView;
     }
-    // Reset quiz when resumed 
     @Override
-    public void onResume() {
-        super.onResume();
-        // start the timer when view is resumed
-        timeStart = System.currentTimeMillis();
-        TextView questionNumber = getActivity().findViewById(R.id.current_question);
-        // reset these variables when view(fragment) is resumed
-        currentQuestion = 0;
-        quizScore = 0;
-        imageCount = 0;
-        questionNumber.setText(getString(R.string.current_question, currentQuestion + 1, totalQuestions));
-        // Get Questions and Answers to set the text for Space
-        TextView questionTextView = getActivity().findViewById(R.id.question_text_view);
-        RadioButton checkbox1 = getActivity().findViewById(R.id.answer1);
-        RadioButton checkbox2 = getActivity().findViewById(R.id.answer2);
-        RadioButton checkbox3 = getActivity().findViewById(R.id.answer3);
-        RadioButton checkbox4 = getActivity().findViewById(R.id.answer4);
-        questionTextView.setText(R.string.question_one);
-        checkbox1.setText(R.string.trick_answer1_1);
-        checkbox2.setText(R.string.trick_answer2_1);
-        checkbox3.setText(R.string.correct_answer3_1);
-        checkbox4.setText(R.string.trick_answer4_1);
+    public void fragmentBecameVisible(){
+        Button resetButton = getActivity().findViewById(R.id.reset_button);
+        resetButton.performClick();
+        Log.i("Space Fragment", "Became Visible now");
     }
     /**
      * Fun little method to change between 3 backgrounds
@@ -438,7 +421,7 @@ public class SpaceFragment extends Fragment {
         }
     };
     /**
-     * Reset everything back to normal
+     * Reset method for reset button
      */
     private View.OnClickListener resetQuiz = new View.OnClickListener() {
         @Override

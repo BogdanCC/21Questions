@@ -8,7 +8,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 public class MainActivity extends AppCompatActivity {
-
+    private FixedTabsPagerAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,9 +18,28 @@ public class MainActivity extends AppCompatActivity {
         // set the layout to activity_main
         setContentView(R.layout.activity_main);
         // Find the view pager that will allow the user to swipe between fragments
-        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                FragmentLifecycleInterface fragment = (FragmentLifecycleInterface) adapter.instantiateItem(viewPager, position);
+                if (fragment != null) {
+                    fragment.fragmentBecameVisible();
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
         // Create an adapter that knows which fragment should be shown on each page
-        FixedTabsPagerAdapter adapter = new FixedTabsPagerAdapter(getSupportFragmentManager(), this);
+        adapter = new FixedTabsPagerAdapter(getSupportFragmentManager(), this);
         // Set the adapter onto the view pager
         viewPager.setAdapter(adapter);
         // Give the TabLayout the ViewPager
@@ -28,7 +47,5 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
 
     }
-
-
 
 }
