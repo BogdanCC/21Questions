@@ -115,7 +115,7 @@
     <string name="question_five_quantum">Niels Bohr once said&#8230;</string>
     <string name="question_six_quantum">Einstein called the quantum\nentanglement phenomenon&#8230;</string>
     <string name="question_seven_quantum">And again&#8230;\nWhat is life?</string>
-    <!-- The sports hints -->
+    <!-- The quantum hints -->
     <string name="question_one_hint_quantum">Indecisive</string>
     <string name="question_two_hint_quantum">We would use a hyphenated word for that I believe</string>
     <string name="question_three_hint_quantum">It\'s one heck of a position</string>
@@ -123,37 +123,37 @@
     <string name="question_five_hint_quantum">That\'s amaziiing! </string>
     <string name="question_six_hint_quantum">Action, at a spooky distance!</string>
     <string name="question_seven_hint_quantum">I\'m tired</string>
-    <!-- Answer set for question one (sports) -->
+    <!-- Answer set for question one (quantum) -->
     <string name="trick_answer1_1_quantum">A particle</string>
     <string name="trick_answer2_1_quantum">A wave</string>
     <string name="trick_answer3_1_quantum">A particular wave?</string>
     <string name="correct_answer4_1_quantum">Both a particle and a wave!</string>
-    <!-- Answer set for question two (sports) -->
+    <!-- Answer set for question two (quantum) -->
     <string name="correct_answer1_2_quantum">Wave-particle duality</string>
     <string name="trick_answer2_2_quantum">Indecisive!</string>
     <string name="trick_answer3_2_quantum">High!</string>
     <string name="trick_answer4_2_quantum">Double trouble!</string>
-    <!-- Answer set for question three (sports) -->
+    <!-- Answer set for question three (quantum) -->
     <string name="trick_answer1_3_quantum">Rich AF</string>
     <string name="trick_answer2_3_quantum">Superman position</string>
     <string name="trick_answer3_3_quantum">Faster than light!</string>
     <string name="correct_answer4_3_quantum">Superposition</string>
-    <!-- Answer set for question four (sports) -->
+    <!-- Answer set for question four (quantum) -->
     <string name="trick_answer1_4_quantum">1 or 0</string>
     <string name="trick_answer2_4_quantum">1 or 1</string>
     <string name="correct_answer3_4_quantum">1 and 0</string>
     <string name="trick_answer4_4_quantum">1 and 1</string>
-    <!-- Answer set for question five (sports) -->
+    <!-- Answer set for question five (quantum) -->
     <string name="trick_answer1_5_quantum">I have a dream&#8230;</string>
     <string name="trick_answer2_5_quantum">Let\'s make America Great Again!</string>
     <string name="trick_answer3_5_quantum">How\'s the weather?</string>
     <string name="correct_answer4_5_quantum">If you\'re not astonished by quantum mechanics, then you haven\'t understood it.</string>
-    <!-- Answer set for question six (sports) -->
+    <!-- Answer set for question six (quantum) -->
     <string name="correct_answer1_6_quantum">Spooky action at a distance</string>
     <string name="trick_answer2_6_quantum">Action spooky at a distance</string>
     <string name="trick_answer3_6_quantum">Distant action at a spooky</string>
     <string name="trick_answer4_6_quantum">Spooky distance at an action</string>
-    <!-- Answer set for question seven (sports) -->
+    <!-- Answer set for question seven (quantum) -->
     <string name="trick_answer1_7_quantum">Baby don\'t hurt me!</string>
     <string name="trick_answer2_7_quantum">^Oh&#8230;that was love again</string>
     <string name="trick_answer3_7_quantum">My head hurts</string>
