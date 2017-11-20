@@ -61,7 +61,30 @@ public class SpaceFragment extends Fragment {
         resetButton.setOnClickListener(resetQuiz);
         return rootView;
     }
-
+    // Reset quiz when resumed 
+    @Override
+    public void onResume() {
+        super.onResume();
+        // start the timer when view is resumed
+        timeStart = System.currentTimeMillis();
+        TextView questionNumber = getActivity().findViewById(R.id.current_question);
+        // reset these variables when view(fragment) is resumed
+        currentQuestion = 0;
+        quizScore = 0;
+        imageCount = 0;
+        questionNumber.setText(getString(R.string.current_question, currentQuestion + 1, totalQuestions));
+        // Get Questions and Answers to set the text for Space
+        TextView questionTextView = getActivity().findViewById(R.id.question_text_view);
+        RadioButton checkbox1 = getActivity().findViewById(R.id.answer1);
+        RadioButton checkbox2 = getActivity().findViewById(R.id.answer2);
+        RadioButton checkbox3 = getActivity().findViewById(R.id.answer3);
+        RadioButton checkbox4 = getActivity().findViewById(R.id.answer4);
+        questionTextView.setText(R.string.question_one);
+        checkbox1.setText(R.string.trick_answer1_1);
+        checkbox2.setText(R.string.trick_answer2_1);
+        checkbox3.setText(R.string.correct_answer3_1);
+        checkbox4.setText(R.string.trick_answer4_1);
+    }
     /**
      * Fun little method to change between 3 backgrounds
      * When we first click : imageCount is 0 as we initialised it
