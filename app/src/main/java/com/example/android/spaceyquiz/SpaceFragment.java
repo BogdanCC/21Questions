@@ -20,9 +20,9 @@ public class SpaceFragment extends Fragment {
     public int totalQuestions = 7; // total number of questions
     public int quizScore = 0; // int to store the correct answers
     public int wrongAnswers; // wrong answers will be total answers - right answers
-    public long timeStart;
-    public long timeEnd;
-    public int imageCount = 0;
+    public long timeStart; // variable to store the time when the quiz started
+    public long timeEnd; // variable to store the time when the quiz ends (after final submit)
+    public int imageCount = 0; // setting imageCount to 0, see the changeImageListener method
 
     @Nullable
     @Override
@@ -64,6 +64,11 @@ public class SpaceFragment extends Fragment {
 
     /**
      * Fun little method to change between 3 backgrounds
+     * When we first click : imageCount is 0 as we initialised it
+     * Once we clicked once it changes the background as stated in the first if statement that is true
+     * imageCount becomes 1. Second click, first else if block is true, changes background;
+     * imageCount becomes 2. Thirs click, second else if block is true, changes background to the initial background set in the xml
+     * imageCount becomes 0. So it starts all over again at the next click.
      */
     private View.OnClickListener changeImageListener = new View.OnClickListener() {
         @Override
@@ -89,6 +94,7 @@ public class SpaceFragment extends Fragment {
     private View.OnClickListener showHintListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
+            // Creating the toast messages
             Toast hint1 = Toast.makeText(getContext(), getString(R.string.question_one_hint), Toast.LENGTH_LONG);
             Toast hint2 = Toast.makeText(getContext(), getString(R.string.question_two_hint), Toast.LENGTH_LONG);
             Toast hint3 = Toast.makeText(getContext(), getString(R.string.question_three_hint), Toast.LENGTH_LONG);
@@ -96,6 +102,7 @@ public class SpaceFragment extends Fragment {
             Toast hint5 = Toast.makeText(getContext(), getString(R.string.question_five_hint), Toast.LENGTH_LONG);
             Toast hint6 = Toast.makeText(getContext(), getString(R.string.question_six_hint), Toast.LENGTH_LONG);
             Toast hint7 = Toast.makeText(getContext(), getString(R.string.question_seven_hint), Toast.LENGTH_LONG);
+            // Showing the toasts at the corresponding questions
             if (currentQuestion == 0) {
                 hint1.show();
             } else if (currentQuestion == 1) {
@@ -130,7 +137,6 @@ public class SpaceFragment extends Fragment {
             TextView question = getActivity().findViewById(R.id.question_text_view);
             TextView questionNumber = getActivity().findViewById(R.id.current_question);
             View finishedQuiz = getActivity().findViewById(R.id.finished_quiz);
-
             /** Handling an error in case user doesn't check any answer OR all questions were answered */
             Toast error = Toast.makeText(getContext(), getString(R.string.no_answer_checked), Toast.LENGTH_LONG);
             Toast errorFinalQuestion = Toast.makeText(getContext(), getString(R.string.final_question), Toast.LENGTH_LONG);
@@ -138,23 +144,26 @@ public class SpaceFragment extends Fragment {
                 error.show();
                 return; // break out of method if no answers selected
             }
-
             if (currentQuestion == totalQuestions) {
                 errorFinalQuestion.show();
             }
+
             /** When we click the submit button we check to see what question this is, starting from 0
              * GET the next question and answers so once we click submit we can SET them in our TextViews
              * Check to see if the selected answer's (isSelected) text string is equal to the current correct answer
              * If it is, add 1 to our score
              */
-
             if (currentQuestion == 0) {
+                // Get the next question and answers to set them after we're done with this current question
                 String nextAnswerOneText = getResources().getString(R.string.correct_answer1_2);
                 String nextAnswerTwoText = getResources().getString(R.string.trick_answer2_2);
                 String nextAnswerThreeText = getResources().getString(R.string.trick_answer3_2);
                 String nextAnswerFourText = getResources().getString(R.string.trick_answer4_2);
                 String nextQuestion = getString(R.string.question_two);
+                // Get the correct answer for the current question to compare it with the selected radio button
                 String currentCorrectAnswer = getResources().getString(R.string.correct_answer3_1);
+                // Comparing the selected radio button (whichever the user might choose) with the correct answer
+                // Add 1 to the score if they match
                 if (checkbox1.isChecked()) {
                     if (checkbox1.getText().toString() == currentCorrectAnswer) {
                         quizScore++;
@@ -175,14 +184,23 @@ public class SpaceFragment extends Fragment {
                         quizScore++;
                     }
                 }
+                // Now that we are done with the current question and answers set the next set of Q&A
                 checkbox1.setText(nextAnswerOneText);
                 checkbox2.setText(nextAnswerTwoText);
                 checkbox3.setText(nextAnswerThreeText);
                 checkbox4.setText(nextAnswerFourText);
                 question.setText(nextQuestion);
+                // We are done with this question, add 1 so we can go to the next one
                 currentQuestion++;
+                // Also set the bottom text '1 0f 7' to '2 of 7'
+                // We pass in the currentQuestion + 1 and totalQuestions for the xml string (see strings.xml)
                 questionNumber.setText(getString(R.string.current_question, currentQuestion + 1, totalQuestions));
             } else if (currentQuestion == 1) {
+                // We repeat the same process as above :
+                // 1. GET next set of answers and the next question
+                // 2. Compare the correct answer to the selected answer - add 1 to the score if they match
+                // 3. SET the next answers and next question to the TextViews
+                // 4. Add 1 to currentQuestion so we can move to the next step
                 String nextAnswerOneText = getResources().getString(R.string.trick_answer1_3);
                 String nextAnswerTwoText = getResources().getString(R.string.trick_answer2_3);
                 String nextAnswerThreeText = getResources().getString(R.string.trick_answer3_3);
@@ -225,25 +243,21 @@ public class SpaceFragment extends Fragment {
                 if (checkbox1.isChecked()) {
                     if (checkbox1.getText().toString() == currentCorrectAnswer) {
                         quizScore++;
-
                     }
                 }
                 if (checkbox2.isChecked()) {
                     if (checkbox2.getText().toString() == currentCorrectAnswer) {
                         quizScore++;
-
                     }
                 }
                 if (checkbox3.isChecked()) {
                     if (checkbox3.getText().toString() == currentCorrectAnswer) {
                         quizScore++;
-
                     }
                 }
                 if (checkbox4.isChecked()) {
                     if (checkbox4.getText().toString() == currentCorrectAnswer) {
                         quizScore++;
-
                     }
                 }
                 String nextQuestion = getString(R.string.question_four);
@@ -263,25 +277,21 @@ public class SpaceFragment extends Fragment {
                 if (checkbox1.isChecked()) {
                     if (checkbox1.getText().toString() == currentCorrectAnswer) {
                         quizScore++;
-
                     }
                 }
                 if (checkbox2.isChecked()) {
                     if (checkbox2.getText().toString() == currentCorrectAnswer) {
                         quizScore++;
-
                     }
                 }
                 if (checkbox3.isChecked()) {
                     if (checkbox3.getText().toString() == currentCorrectAnswer) {
                         quizScore++;
-
                     }
                 }
                 if (checkbox4.isChecked()) {
                     if (checkbox4.getText().toString() == currentCorrectAnswer) {
                         quizScore++;
-
                     }
                 }
                 String nextQuestion = getString(R.string.question_five);
@@ -301,25 +311,21 @@ public class SpaceFragment extends Fragment {
                 if (checkbox1.isChecked()) {
                     if (checkbox1.getText().toString() == currentCorrectAnswer) {
                         quizScore++;
-
                     }
                 }
                 if (checkbox2.isChecked()) {
                     if (checkbox2.getText().toString() == currentCorrectAnswer) {
                         quizScore++;
-
                     }
                 }
                 if (checkbox3.isChecked()) {
                     if (checkbox3.getText().toString() == currentCorrectAnswer) {
                         quizScore++;
-
                     }
                 }
                 if (checkbox4.isChecked()) {
                     if (checkbox4.getText().toString() == currentCorrectAnswer) {
                         quizScore++;
-
                     }
                 }
                 String nextQuestion = getString(R.string.question_six);
@@ -339,25 +345,21 @@ public class SpaceFragment extends Fragment {
                 if (checkbox1.isChecked()) {
                     if (checkbox1.getText().toString() == currentCorrectAnswer) {
                         quizScore++;
-
                     }
                 }
                 if (checkbox2.isChecked()) {
                     if (checkbox2.getText().toString() == currentCorrectAnswer) {
                         quizScore++;
-
                     }
                 }
                 if (checkbox3.isChecked()) {
                     if (checkbox3.getText().toString() == currentCorrectAnswer) {
                         quizScore++;
-
                     }
                 }
                 if (checkbox4.isChecked()) {
                     if (checkbox4.getText().toString() == currentCorrectAnswer) {
                         quizScore++;
-
                     }
                 }
                 String nextQuestion = getString(R.string.question_seven);
@@ -369,41 +371,41 @@ public class SpaceFragment extends Fragment {
                 currentQuestion++;
                 questionNumber.setText(getString(R.string.current_question, currentQuestion + 1, totalQuestions));
             } else if (currentQuestion == 6) {
-
+                // This is the final question so we don't have any more questions and answers to get
+                // Now we compare the selected answer with the correct answer as we did before
+                // And we display the finished screen with the results
                 String currentCorrectAnswer = getResources().getString(R.string.correct_answer4_7);
                 if (checkbox1.isChecked()) {
                     if (checkbox1.getText().toString() == currentCorrectAnswer) {
                         quizScore++;
-
                     }
                 }
                 if (checkbox2.isChecked()) {
                     if (checkbox2.getText().toString() == currentCorrectAnswer) {
                         quizScore++;
-
                     }
                 }
                 if (checkbox3.isChecked()) {
                     if (checkbox3.getText().toString() == currentCorrectAnswer) {
                         quizScore++;
-
                     }
                 }
                 if (checkbox4.isChecked()) {
                     if (checkbox4.getText().toString() == currentCorrectAnswer) {
                         quizScore++;
-
                     }
                 }
-                currentQuestion++;
-                wrongAnswers = totalQuestions - quizScore;
-                timeEnd = System.currentTimeMillis();
-                long timeDelta = timeEnd - timeStart;
-                double elapsedSeconds = timeDelta / 1000.0;
+                currentQuestion++; // now currentQuestion is = to totalQuestions(7) so the toast error will show up if we click submit
+                wrongAnswers = totalQuestions - quizScore; // correct answers : quizScore; wrong answers : totalQuestions - quizScore
+                timeEnd = System.currentTimeMillis(); // get the current time
+                long timeDelta = timeEnd - timeStart; // find out time elapsed (timeStart - when quiz started, timeEnd - when quiz ended)
+                double elapsedSeconds = timeDelta / 1000.0; // this is to show it in seconds
+                // Now we destroy the answers view so we can show the final view that was set to View.GONE this whole time
                 checkbox1.setVisibility(View.GONE);
                 checkbox2.setVisibility(View.GONE);
                 checkbox3.setVisibility(View.GONE);
                 checkbox4.setVisibility(View.GONE);
+                // Show the results screen and set the correct text to each TextView
                 finishedQuiz.setVisibility(View.VISIBLE);
                 question.setText(getString(R.string.all_questions_done));
                 finalCorrectAnswers.setText("" + quizScore);
