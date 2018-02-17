@@ -6,283 +6,171 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.spaceyquiz.GotActivity"
     >
+    <!-- Background layout -->
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style="@style/backgroundStyle"
         >
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            style="@style/imageBackgroundStyle"
             android:src="@drawable/got1"
-            android:scaleType="centerCrop"
             android:id="@+id/changeable_image1"
             />
     </FrameLayout>
+    <!-- Content ScrollView -->
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        style="@style/backgroundStyle"
+        >
+        <!-- Content container -->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingLeft="@dimen/medium_spacing"
-            android:paddingRight="@dimen/medium_spacing"
-            android:paddingTop="@dimen/small_spacing"
+           style="@style/containerStyle"
             >
+            <!-- Background change and hint icons layout -->
             <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                style="@style/iconsContainer">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/layers"
-                    android:clickable="true"
+                    style="@style/iconsStyle"
                     android:id="@+id/change_image1"
+                    android:src="@drawable/layers"
                     />
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/iconsStyle"
                     android:src="@drawable/idea"
-                    android:clickable="true"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/show_hint1"
                     />
             </RelativeLayout>
-
+            <!-- Question Layout -->
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/question_textbox_size"
+                style="@style/questionsLayout"
+                android:fontFamily="@font/game_of_thrones"
                 android:text="@string/question_one"
                 android:textAlignment="center"
-                android:gravity="center_vertical"
-                android:layout_marginTop="@dimen/small_spacing"
                 android:id="@+id/question_text_view1"
-                android:textSize="@dimen/question_text_size"
-                android:textColor="@color/text_color_white"
-                android:layout_marginBottom="@dimen/small_spacing"
-                android:fontFamily="@font/game_of_thrones"
                 />
+            <!-- Finished quiz screen layout -->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/finishScreenLayout"
                 android:id="@+id/finished_quiz1"
-                android:orientation="vertical"
-                android:background="@color/white_general"
-                android:padding="@dimen/medium_spacing"
-                android:visibility="gone"
                 >
+                <!-- Correct answers layout -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    style="@style/correctAnswersLayout">
                     <TextView
-                        android:layout_width="@dimen/null_size"
-                        android:layout_height="wrap_content"
-                        android:text="@string/correct_answers"
-                        android:layout_weight="2"
-                        android:layout_gravity="center_vertical"
+                        style="@style/correctAnswersText"
                         android:fontFamily="@font/roboto_thin"
-                        android:textColor="@color/text_color"
                         />
                     <TextView
-                        android:layout_width="@dimen/null_size"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:layout_gravity="center_vertical"
-                        android:text=""
+                        style="@style/correctAnswersNumber"
                         android:textAlignment="center"
                         android:id="@+id/final_correct_answers1"
                         android:fontFamily="@font/roboto_thin"
-                        android:textColor="@color/text_color"
                         />
                     <ImageView
-                        android:layout_width="@dimen/null_size"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/success"
-                        android:layout_weight="1"
+                        style="@style/correctAnswersImage"
                         />
                 </LinearLayout>
+                <!-- Wrong answers layout -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/small_spacing"
+                    style="@style/wrongAnswersLayout"
                     >
                     <TextView
-                        android:layout_width="@dimen/null_size"
-                        android:layout_height="wrap_content"
-                        android:text="@string/wrong_answers"
-                        android:layout_weight="2"
-                        android:layout_gravity="center_vertical"
-                        android:fontFamily="@font/roboto_thin"
-                        android:textColor="@color/text_color" />
+                        style="@style/wrongAnswersText"
+                        android:fontFamily="@font/roboto_thin"/>
                     <TextView
-                        android:layout_width="@dimen/null_size"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:layout_gravity="center_vertical"
-                        android:text=""
+                        style="@style/wrongAnswersNumber"
                         android:textAlignment="center"
                         android:id="@+id/final_wrong_answers1"
                         android:fontFamily="@font/roboto_thin"
-                        android:textColor="@color/text_color"
                         />
                     <ImageView
-                        android:layout_width="@dimen/null_size"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/error"
-                        android:layout_weight="1"
+                        style="@style/wrongAnswersImage"
                         />
                 </LinearLayout>
+                <!-- Time elapsed layout -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/small_spacing"
+                    style="@style/timeElapsedLayout"
                     >
                     <TextView
-                        android:layout_width="@dimen/null_size"
-                        android:layout_height="wrap_content"
-                        android:text="@string/time_elapsed"
-                        android:layout_weight="2"
-                        android:layout_gravity="center_vertical"
+                        style="@style/timeElapsedText"
                         android:fontFamily="@font/roboto_thin"
-                        android:textColor="@color/text_color"
                         />
                     <TextView
-                        android:layout_width="@dimen/null_size"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:layout_gravity="center_vertical"
-                        android:text=""
+                        style="@style/timeElapsedNumber"
                         android:textAlignment="center"
                         android:id="@+id/final_time_elapsed1"
                         android:fontFamily="@font/roboto_thin"
-                        android:textColor="@color/text_color"
                         />
                     <ImageView
-                        android:layout_width="@dimen/null_size"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/hourglass"
-                        android:layout_weight="1"
+                        style="@style/timeElapsedImage"
                         />
                 </LinearLayout>
             </LinearLayout>
+            <!-- Answer options layout -->
             <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/radioButtonContainer"
                 >
                 <android.support.v7.widget.AppCompatRadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/radio_button_height"
+                    style="@style/radioButtonStyle"
+                    android:fontFamily="@font/roboto_light"
                     android:text="@string/trick_answer1_1"
                     android:id="@+id/answer11"
-                    android:paddingLeft="@dimen/medium_spacing"
-                    android:paddingRight="@dimen/medium_spacing"
-                    android:textColor="@color/text_color"
-                    android:background="@drawable/radio_button_background"
-                    android:button="@android:color/transparent"
-                    android:drawableLeft="@drawable/sword"
-                    android:drawablePadding="@dimen/small_spacing"
-                    android:fontFamily="@font/roboto_light"
                     />
                 <android.support.v7.widget.AppCompatRadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/radio_button_height"
+                    style="@style/radioButtonStyle"
+                    android:fontFamily="@font/roboto_light"
                     android:text="@string/trick_answer2_1"
                     android:id="@+id/answer21"
-                    android:paddingLeft="@dimen/medium_spacing"
-                    android:textColor="@color/text_color"
-                    android:background="@drawable/radio_button_background"
-                    android:button="@android:color/transparent"
-                    android:drawableLeft="@drawable/sword"
-                    android:paddingRight="@dimen/medium_spacing"
-                    android:drawablePadding="@dimen/small_spacing"
-                    android:fontFamily="@font/roboto_light"
                     />
                 <android.support.v7.widget.AppCompatRadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/radio_button_height"
+                    style="@style/radioButtonStyle"
+                    android:fontFamily="@font/roboto_light"
                     android:text="@string/correct_answer3_1"
                     android:id="@+id/answer31"
-                    android:paddingLeft="@dimen/medium_spacing"
-                    android:paddingRight="@dimen/medium_spacing"
-                    android:textColor="@color/text_color"
-                    android:background="@drawable/radio_button_background"
-                    android:button="@android:color/transparent"
-                    android:drawableLeft="@drawable/sword"
-                    android:drawablePadding="@dimen/small_spacing"
-                    android:fontFamily="@font/roboto_light"
                     />
                 <android.support.v7.widget.AppCompatRadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/radio_button_height"
+                    style="@style/radioButtonStyle"
+                    android:fontFamily="@font/roboto_light"
                     android:text="@string/trick_answer4_1"
                     android:id="@+id/answer41"
-                    android:paddingLeft="@dimen/medium_spacing"
-                    android:paddingRight="@dimen/medium_spacing"
-                    android:textColor="@color/text_color"
-                    android:background="@drawable/radio_button_background"
-                    android:button="@android:color/transparent"
-                    android:drawableLeft="@drawable/sword"
-                    android:drawablePadding="@dimen/small_spacing"
-                    android:fontFamily="@font/roboto_light"
                     />
             </RadioGroup>
+            <!-- Current question number layout -->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white_general"
-                android:padding="@dimen/small_spacing"
-                android:visibility="visible"
+                style="@style/currentQuestionLayout"
                 android:id="@+id/question_number_layout1"
                 >
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text=""
+                    style="@style/currentQuestionText"
                     android:textAlignment="center"
                     android:id="@+id/current_question1"
                     android:fontFamily="@font/roboto_thin"
-                    android:textColor="@color/text_color"
                     />
             </LinearLayout>
+            <!-- Divider layout -->
             <LinearLayout
-                android:layout_width="@dimen/divider_width"
-                android:layout_height="@dimen/divider_height"
-                android:background="@color/white_general"
-                android:layout_gravity="center"
+                style="@style/dividerStyle"
                 android:id="@+id/divider1"
-                android:orientation="horizontal"
                 >
             </LinearLayout>
+            <!-- Submit button layout -->
             <Button
-                android:layout_width="@dimen/circle_button_size"
-                android:layout_height="@dimen/circle_button_size"
-                android:text="@string/submit_s"
+                style="@style/submitButtonStyle"
                 android:id="@+id/submit_button1"
-                android:layout_gravity="center"
                 android:background="@drawable/circle_got"
-                android:textSize="@dimen/submit_text_size"
-                android:textColor="@color/text_color_white"
                 android:fontFamily="@font/game_of_thrones"
                 />
+            <!-- Divider layout -->
             <LinearLayout
-                android:layout_width="@dimen/divider_width"
-                android:layout_height="@dimen/divider_height"
-                android:background="@color/white_general"
-                android:layout_gravity="center"
+                style="@style/dividerStyle"
                 android:id="@+id/divider2"
-                android:orientation="horizontal"
                 >
             </LinearLayout>
+            <!-- Reset button layout -->
             <Button
-                android:layout_width="@dimen/circle_button_size"
-                android:layout_height="@dimen/circle_button_size"
-                android:text="@string/reset_r"
-                android:textSize="@dimen/submit_text_size"
-                android:textColor="@color/submit_got_color"
-                android:id="@+id/reset_button1"
-                android:layout_gravity="center"
+                style="@style/resetButtonStyle"
                 android:background="@drawable/circle_reset_got"
+                android:id="@+id/reset_button1"
+                android:textColor="@color/submit_got_color"
                 android:fontFamily="@font/game_of_thrones"
                 />
         </LinearLayout>

@@ -5,10 +5,167 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/light_cyan</item>
     </style>
     <style name="tabStyle">
-        <item name="tabIndicatorColor">@color/colorPrimary</item>
-        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="tabIndicatorColor">@color/light_cyan</item>
+    </style>
+    <!-- Quizzes background styles -->
+    <style name="backgroundStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="imageBackgroundStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+    <!-- Quiz container style -->
+    <style name="containerStyle">
+         <item name="android:layout_width">match_parent</item>
+         <item name="android:layout_height">match_parent</item>
+         <item name="android:orientation">vertical</item>
+         <item name="android:paddingLeft">@dimen/medium_spacing</item>
+         <item name="android:paddingRight">@dimen/medium_spacing</item>
+         <item name="android:paddingTop">@dimen/small_spacing</item>
+    </style>
+    <!-- Icons layout styles -->
+    <style name="iconsContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="iconsStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <!-- Question layout style -->
+    <style name="questionsLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/question_textbox_size</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginTop">@dimen/small_spacing</item>
+        <item name="android:textSize">@dimen/question_text_size</item>
+        <item name="android:textColor">@color/text_color_white</item>
+        <item name="android:layout_marginBottom">@dimen/small_spacing</item>
+    </style>
+    <!-- Finished quiz screen layout -->
+    <style name="finishScreenLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/white_general</item>
+        <item name="android:padding">@dimen/medium_spacing</item>
+        <item name="android:visibility">gone</item>
+    </style>
+    <style name="correctAnswersLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="correctAnswersText">
+        <item name="android:layout_width">@dimen/null_size</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/correct_answers</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+    <style name="correctAnswersNumber">
+        <item name="android:layout_width">@dimen/null_size</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+    <style name="correctAnswersImage">
+        <item name="android:layout_width">@dimen/null_size</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/success</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="wrongAnswersLayout" parent="correctAnswersLayout">
+        <item name="android:layout_marginTop">@dimen/small_spacing</item>
+    </style>
+    <style name="wrongAnswersText" parent="correctAnswersText">
+        <item name="android:text">@string/wrong_answers</item>
+    </style>
+    <style name="wrongAnswersNumber" parent="correctAnswersNumber">
+    </style>
+    <style name="wrongAnswersImage" parent="correctAnswersImage">
+        <item name="android:src">@drawable/error</item>
+    </style>
+    <style name="timeElapsedLayout" parent="correctAnswersLayout">
+        <item name="android:layout_marginTop">@dimen/small_spacing</item>
+    </style>
+    <style name="timeElapsedText" parent="correctAnswersText">
+        <item name="android:text"> @string/time_elapsed</item>
+    </style>
+    <style name="timeElapsedNumber" parent="correctAnswersNumber">
+    </style>
+    <style name="timeElapsedImage" parent="correctAnswersImage">
+        <item name="android:src">@drawable/hourglass</item>
+    </style>
+
+    <!-- Radio buttons layout styles -->
+    <style name="radioButtonContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="radioButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/radio_button_height</item>
+        <item name="android:paddingLeft">@dimen/medium_spacing</item>
+        <item name="android:paddingRight">@dimen/medium_spacing</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:background">@drawable/radio_button_background</item>
+        <item name="android:button">@android:color/transparent</item>
+        <item name="android:drawableLeft">@drawable/sword</item>
+        <item name="android:drawablePadding">@dimen/small_spacing</item>
+    </style>
+    <style name="currentQuestionLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white_general</item>
+        <item name="android:padding">@dimen/small_spacing</item>
+        <item name="android:visibility">visible</item>
+    </style>
+    <style name="currentQuestionText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+    <style name="dividerStyle">
+        <item name="android:layout_width">@dimen/divider_width</item>
+        <item name="android:layout_height">@dimen/divider_height</item>
+        <item name="android:background">@color/white_general</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <!-- Submit and Reset buttons style -->
+    <style name="submitButtonStyle">
+        <item name="android:layout_width">@dimen/circle_button_size</item>
+        <item name="android:layout_height">@dimen/circle_button_size</item>
+        <item name="android:text">@string/submit_s</item>
+        <item name="android:textSize">@dimen/submit_text_size</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/text_color_white</item>
+    </style>
+    <style name="resetButtonStyle" parent="submitButtonStyle">
+        <item name="android:text">@string/reset_r</item>
+    </style>
+    <!-- Space quiz styles -->
+    <style name="radioButtonStyle.Space" parent="radioButtonStyle">
+        <item name="android:drawableLeft">@drawable/navigation</item>
+    </style>
+    <!-- Quantum quiz style -->
+    <style name="radioButtonStyle.Quantum" parent="radioButtonStyle">
+        <item name="android:drawableLeft">@drawable/science</item>
+    </style>
+
+    <!-- Startscreen styles -->
+    <style name="checkboxStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/small_spacing</item>
     </style>
 </resources>

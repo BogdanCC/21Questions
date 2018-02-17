@@ -169,5 +169,18 @@
     <string name="no_answer_checked">Please select an answer</string>
     <string name="final_question">You\'ve reached the end, please reset</string>
     <!-- Strings for java code -->
-    <string name="current_question"><xliff:g id="current_position" example="5">%d</xliff:g> of <xliff:g id="total_positions" example="7">%d</xliff:g></string>
+    <string name="current_question"><xliff:g example="5" id="current_position">%d</xliff:g> of <xliff:g example="7" id="total_positions">%d</xliff:g></string>
+    <!-- Startscreen strings -->
+    <string name="be_worthy">Before you start the main quizzes,\n\nyou need to prove yourself worthy!</string>
+    <string name="understand">I understand</string>
+    <string name="name_please">What is your name?</string>
+    <string name="next">Next</string>
+    <string name="startscreen_question">Can you answer this incredible question?</string>
+    <string name="startscreen_answer_1">This answer is so correct</string>
+    <string name="startscreen_answer_2">This answer is so wrong</string>
+    <string name="startscreen_answer_3">This answer is so correct</string>
+    <string name="congratulations">Congratulations,\n<xliff:g example="John" id="playerName">%s</xliff:g></string>
+    <string name="start_main_quiz">Start main quiz</string>
+    <string name="no_name_toast">You must have a name!</string>
+    <string name="wrong_answers_toast">Wrong answers. Don\'t worry, it\'s hard!</string>
 </resources>
