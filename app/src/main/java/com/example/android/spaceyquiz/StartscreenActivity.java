@@ -98,7 +98,7 @@ public class StartscreenActivity extends AppCompatActivity {
                 nameAnswer.setVisibility(View.GONE);
                 startscreenQuestion.setText(getString(R.string.congratulations, playerName));
             } else {
-                t = Toast.makeText(this, R.string.not_your_name_toast + name.getText().toString(), Toast.LENGTH_LONG);
+                t = Toast.makeText(this, getString(R.string.not_your_name_toast) + name.getText().toString(), Toast.LENGTH_LONG);
                 t.show();
             }
         }
