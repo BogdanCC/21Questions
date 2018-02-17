@@ -179,8 +179,10 @@
     <string name="startscreen_answer_1">This answer is so correct</string>
     <string name="startscreen_answer_2">This answer is so wrong</string>
     <string name="startscreen_answer_3">This answer is so correct</string>
+    <string name="whats_your_name">What was your name again?</string>
     <string name="congratulations">Congratulations,\n<xliff:g example="John" id="playerName">%s</xliff:g></string>
     <string name="start_main_quiz">Start main quiz</string>
     <string name="no_name_toast">You must have a name!</string>
+    <string name="not_your_name_toast">That\'s not your name,&#032;</string>
     <string name="wrong_answers_toast">Wrong answers. Don\'t worry, it\'s hard!</string>
 </resources>
