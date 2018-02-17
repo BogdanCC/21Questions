@@ -17,6 +17,7 @@ public class StartscreenActivity extends AppCompatActivity {
     // Global variables we need
     Typeface robotoLight;
     EditText name;
+    EditText nameAnswer;
     TextView startscreenQuestion;
     TextView nextText;
     LinearLayout next;
@@ -40,6 +41,7 @@ public class StartscreenActivity extends AppCompatActivity {
         next = findViewById(R.id.next);
         nextText = findViewById(R.id.next_text);
         name = findViewById(R.id.player_name);
+        nameAnswer = findViewById(R.id.player_name_answer);
         startscreenQuestion = findViewById(R.id.startscreen_question);
         checkboxesContainer = findViewById(R.id.checkboxes_container);
         c1 = findViewById(R.id.checkbox1);
@@ -82,15 +84,25 @@ public class StartscreenActivity extends AppCompatActivity {
             if(c1.isChecked() && c3.isChecked() && !c2.isChecked()) {
                 pageNumber += 1;
                 checkboxesContainer.setVisibility(View.GONE);
-                nextText.setText(R.string.start_main_quiz);
-                String playerName = name.getText().toString();
-                startscreenQuestion.setText(getString(R.string.congratulations, playerName));
+                startscreenQuestion.setText(R.string.whats_your_name);
+                nameAnswer.setVisibility(View.VISIBLE);
             } else{
                 t = Toast.makeText(this, R.string.wrong_answers_toast, Toast.LENGTH_LONG);
                 t.show();
             }
+        } else if(pageNumber == 3) {
+            if(nameAnswer.getText().toString().equals(name.getText().toString())) {
+                pageNumber += 1;
+                nextText.setText(R.string.start_main_quiz);
+                String playerName = name.getText().toString();
+                nameAnswer.setVisibility(View.GONE);
+                startscreenQuestion.setText(getString(R.string.congratulations, playerName));
+            } else {
+                t = Toast.makeText(this, R.string.not_your_name_toast + name.getText().toString(), Toast.LENGTH_LONG);
+                t.show();
+            }
         }
-        else if(pageNumber == 3) {
+        else if(pageNumber == 4) {
             Intent i = new Intent(this, MainActivity.class);
             startActivity(i);
         }
