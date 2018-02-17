@@ -27,6 +27,14 @@
         android:visibility="gone"
         android:inputType="textCapWords"
         />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_spacing"
+        android:id="@+id/player_name_answer"
+        android:visibility="gone"
+        android:inputType="textCapWords"
+        />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
