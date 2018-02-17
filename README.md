@@ -1,5 +1,6 @@
-# 21 Questions 
- - There are 21 questions here, 3 categories with 7 questions each
+# 21 Questions
+ - App starts with a silly 'tutorial' that has 2 questions you need to answer correctly in order to go to the main quiz
+ - Main quiz - 21 questions, 3 categories with 7 questions each
  - You can press the lightbulb for answer hints
  - You can press the upper left image to change between 3 backgrounds for each category
  - Once a quiz starts the timer will start keeping track of the time elapsed until your final submit
