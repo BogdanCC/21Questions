@@ -91,14 +91,14 @@ public class StartscreenActivity extends AppCompatActivity {
                 t.show();
             }
         } else if(pageNumber == 3) {
-            if(nameAnswer.getText().toString().equals(name.getText().toString())) {
+            if(nameAnswer.getText().toString().trim().equals(name.getText().toString().trim())) {
                 pageNumber += 1;
                 nextText.setText(R.string.start_main_quiz);
                 String playerName = name.getText().toString();
                 nameAnswer.setVisibility(View.GONE);
                 startscreenQuestion.setText(getString(R.string.congratulations, playerName));
             } else {
-                t = Toast.makeText(this, getString(R.string.not_your_name_toast) + name.getText().toString(), Toast.LENGTH_LONG);
+                t = Toast.makeText(this, getString(R.string.not_your_name_toast) + " " + name.getText().toString().trim(), Toast.LENGTH_LONG);
                 t.show();
             }
         }
